@@ -1,21 +1,44 @@
 
-let firstNum = 0;
-let secNum = 0;
+let firstNum = null;
+let secNum = null;
 let operator = '';
+
+let display = document.querySelector('.display');
+
+
+const nums = document.querySelectorAll('.num');
+nums.forEach( num => num.addEventListener('click', function(){
+    if(!firstNum == null)
+    {
+        firstNum = Number(this.innerText);
+    }else{
+        secondNum = Number(this.innerText);
+    }
+    
+    display.innerText = firstNum;
+}
+
+));
+
+let equal = document.querySelector('.equal');
+equal.addEventListener('click', function(){
+
+});
+
 
 function operate(a,b,o){
     switch (o) {
         case '+':
-            add(a,b);
+          firstNum = add(a,b);
             break;
         case '-':
-            subtract(a,b);
+          firstNum = subtract(a,b);
             break;
         case '*':
-            multiply(a,b);
+          firstNum = multiply(a,b);
             break;
         case '/':
-            divide(a,b);    
+          firstNum = divide(a,b);    
             break;
         default:
             break;

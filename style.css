@@ -1,0 +1,48 @@
+*{
+    border: 1px solid red;
+}
+
+.calc-body{
+    width:900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    
+}
+
+.buttons{
+    display: flex;
+
+}
+.numbers button{
+    width: 200px;
+
+}
+
+
+.numbers{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.operators{
+    display: flex;
+    flex-direction: column;
+}
+
+.display{
+    width: auto;
+    font-size: 40px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+
+button{
+    padding:50px;
+    font-size: 40px;;
+}
