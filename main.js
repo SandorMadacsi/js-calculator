@@ -1,44 +1,62 @@
 
 let firstNum = null;
 let secNum = null;
-let operator = '';
+let operatorSign = '';
 
-let display = document.querySelector('.display');
+let placeHolder = document.querySelector('.place-holder');
+let input = document.querySelector('.input');
 
 
 const nums = document.querySelectorAll('.num');
 nums.forEach( num => num.addEventListener('click', function(){
-    if(!firstNum == null)
+    if(placeHolder.innerText === '0')
     {
-        firstNum = Number(this.innerText);
-    }else{
-        secondNum = Number(this.innerText);
+        placeHolder.innerText = this.innerText;
     }
-    
-    display.innerText = firstNum;
+    else{
+        placeHolder.innerText += this.innerText;
+    }
+
 }
 
 ));
 
+const operators = document.querySelectorAll('.op');
+operators.forEach(operator => operator.addEventListener('click', function(){
+    firstNum = Number(placeHolder.innerText);
+    operatorSign = this.innerText;
+    input.innerText = `${firstNum}  ${operatorSign}`;
+    placeHolder.innerText = '';
+}));
+
 let equal = document.querySelector('.equal');
 equal.addEventListener('click', function(){
+    secNum = Number(placeHolder.innerText);
+    input.innerText = `${firstNum}  ${operatorSign} ${secNum}`;
+    operate(firstNum, secNum, operatorSign);
+    placeHolder.innerText = firstNum;
 
 });
+
+let clear = document.querySelector('.clear');
+clear.addEventListener('click', function(){
+    placeHolder.innerText = '';
+})
 
 
 function operate(a,b,o){
     switch (o) {
         case '+':
-          firstNum = add(a,b);
+           firstNum = add(a,b);
             break;
         case '-':
-          firstNum = subtract(a,b);
+           firstNum = subtract(a,b);
             break;
-        case '*':
-          firstNum = multiply(a,b);
+        case 'x':
+          firstNum =  multiply(a,b);
             break;
         case '/':
-          firstNum = divide(a,b);    
+          firstNum =  divide(a,b);    
             break;
         default:
             break;

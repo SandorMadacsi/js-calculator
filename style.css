@@ -34,11 +34,21 @@
 }
 
 .display{
+    width:600px;
+    display: flex;
+    flex-wrap: wrap;
+    height:250px;
+}
+.place-holder,
+.input{
     width: auto;
     font-size: 40px;
     padding: 10px 0;
     width: 100%;
+    background: pink;
 }
+
+
 
 
 
