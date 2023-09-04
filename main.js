@@ -32,13 +32,13 @@ operators.forEach(operator => operator.addEventListener('click', function(){
         placeHolder.innerText = firstNum;
         operatorSign = this.innerText;
         input.innerText = `${firstNum}  ${operatorSign}`;
-        placeHolder.innerText = '';
+        placeHolder.innerText = '0';
     }
     else{
         firstNum = Number(placeHolder.innerText);
         operatorSign = this.innerText;
         input.innerText = `${firstNum}  ${operatorSign}`;
-        placeHolder.innerText = '';
+        placeHolder.innerText = '0';
     }
     
 

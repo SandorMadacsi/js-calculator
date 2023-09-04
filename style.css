@@ -1,57 +1,108 @@
-*{
-    border: 1px solid red;
-}
 
+
+h1{
+    text-align: center;
+}
 .calc-body{
-    width:900px;
+    width: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-    
+    margin: auto;
+    margin-top:250px;
+    background-color: black;
 }
 
 .buttons{
     display: flex;
+    border: 7px solid black;
 
 }
 .numbers button{
-    width: 200px;
+    width: 148px;
+    border: 4px solid black;
 
 }
 
 
 .numbers{
-    width: 600px;
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .operators{
     display: flex;
     flex-direction: column;
+
 }
 
 .display{
-    width:600px;
     display: flex;
     flex-wrap: wrap;
     height:250px;
+    border: 3px solid black;
 }
 .place-holder,
 .input{
-
-    font-size: 40px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 50px;
     width:100%;
-    background: pink;
+    font-weight: bold;
+    background: grey;
+    border: 7px solid black;
 }
 
+button{
+    background-color: darkslategrey;
+}
 
+button:hover{
+    background-color: rgb(76,127,127)
+}
 
+.operators button{
+    background-color: rgb(255, 94, 14)
+}
 
+.operators button:hover{
+    background-color:  rgb( 255, 168, 54);
+}
+
+.equal,
+.clear{
+    background-color: olive;
+}
+
+.equal:hover,
+.clear:hover{
+    background-color: rgb(188,184,138);
+}
 
 button{
     padding:50px;
-    font-size: 40px;;
+    font-size: 40px;
+    border: 4px solid black;
 }
+
+footer {
+    font-size: 39px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+
+  footer a img{
+    width:40px;
+    transition: transform .7s ease-in-out;
+  }
+
+  img:hover{
+    transform: rotate(360deg);
+  }
